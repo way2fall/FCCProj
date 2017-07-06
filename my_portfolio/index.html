@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Desmond's Portfolio</title>
+    
+    <link rel="stylesheet" href="css/style.css">
+    <!-- 最新版本的 Bootstrap 核心 CSS 文件 -->
+    <link rel="stylesheet" href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+</head>
+
+<body data-spy="scroll" data-target=".navbar" data-offset="50">
+  <!-- 导航栏 -->
+  <nav class="navbar navbar-inverse navbar-fixed-top">
+    <div class="container-fluid">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".myNavbar">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="#">Desmond</a>
+      </div>
+      <div class="collapse navbar-collapse myNavbar">
+        <ul class="nav navbar-nav navbar-right">
+          <li class="active">
+            <a href="#home">
+              <span class="glyphicon glyphicon-home"></span> Home</a>
+          </li>
+          <li>
+            <a href="#about_me">
+              <span class="glyphicon glyphicon-info-sign"></span> About Me</a>
+          </li>
+          <li>
+            <a href="#portfolio">
+              <span class="glyphicon glyphicon-briefcase"></span> Portfolio</a>
+          </li>
+          <li>
+            <a href="#contact">
+              <span class="glyphicon glyphicon-comment"></span> Contact</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  <section id="home" class="home">
+  	<h1>Desmond</h1>
+  	<h3>Stay hungry, stay foolish.</h3>
+  	<img src="https://thumbnail0.baidupcs.com/thumbnail/69b34463497e00662d0dd335ed9360c4?fid=4281534574-250528-501310244165708&time=1499328000&rt=sh&sign=FDTAER-DCb740ccc5511e5e8fedcff06b081203-erp0uyIUW52QKB9lCsxpVoWRgis%3D&expires=8h&chkv=0&chkbd=0&chkpc=&dp-logid=4330056337050033992&dp-callid=0&size=c710_u400&quality=100&vuk=-&ft=video" class="img-responsive img-circle my_pic" alt="my_pic">
+  	<div class="img-text">
+  		<p>My name is Desmond majored in Information and Computing Science. I've been running several Amazon stores for a year and half. I take extra interest in web development and dabble in it during my spare time. Recently I registered as a student of FreeCodeCamp in the hope of becoming a professional full-time web developer.</p>
+  	</div>
+  </section>
+  <section id="about_me" class="about_me">
+  	<div class="container">
+  		<h1>About Me</h1>
+  		<div class="panel-group" id="accordion">
+  			<div class="panel panel-default">
+  				<div class="panel-heading">
+  					<h4 class="panel-title">
+  						<a href="#collapse1" data-toggle="collapse" data-parent="#accordion">FreeCodeCamp student</a>
+  					</h4>
+  				</div>
+  				<div id="collapse1" class="panel-collapse collapse in">
+  					<div class="panel-body">
+  						<h3>June 2017 - Present</h3>
+  						<p>In late June, I started taking FCC courses hoping to become a full-time web developer in the near future.</p>
+  					</div>
+  				</div>
+  			</div>
+
+  			<div class="panel panel-default">
+  				<div class="panel-heading">
+  					<h4 class="panel-title">
+  						<a href="#collapse2" data-toggle="collapse" data-parent="#accordion">FreeCodeCamp student</a>
+  					</h4>
+  				</div>
+  				<div id="collapse2" class="panel-collapse collapse">
+  					<div class="panel-body">
+  						<h3>June 2017 - Present</h3>
+  						<p>In late June, I started taking FCC courses hoping to become a full-time web developer in the near future.</p>
+  					</div>
+  				</div>
+  			</div>
+  		</div>
+  	</div>
+  </section>
+  <script src="https://cdn.bootcss.com/jquery/1.12.4/jquery.min.js"></script>
+  <script src="https://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+</body>
+</html>
