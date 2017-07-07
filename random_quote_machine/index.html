@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Random Quote Machine</title>
+    <link rel="stylesheet" href="css/style.css">
+    
+    <link rel='stylesheet' href='http://apps.bdimg.com/libs/fontawesome/4.4.0/css/font-awesome.css'>
+</head>
+
+<body>
+    <div class="main-container" id="main-container">
+        <h1>Quotes about Lost</h1>
+        <p class="ps">Not that Lost, but still, lost...</p>
+        <div class="quote-container">
+            <p class="quote-text" id="quote-text"></p>
+            <p class="said-by" id="said-by"></p>
+        </div>
+        <button class="random-quote" id="random-quote">Random Quote</button>
+    </div>
+    
+    <script>
+    //widget.js
+    window.twttr = (function(d, s, id) {
+        var js,
+            fjs = d.getElementsByTagName(s)[0],
+            t = window.twttr || {};
+        if (d.getElementById(id)) return t;
+        js = d.createElement(s);
+        js.id = id;
+        js.src = "https://platform.twitter.com/widgets.js";
+        fjs.parentNode.insertBefore(js, fjs);
+
+        t._e = [];
+        t.ready = function(f) {
+            t._e.push(f);
+        };
+
+        return t;
+    })(document, "script", "twitter-wjs");
+    </script>
+    <script src="js/quotes.js"></script>
+    <script src="js/app.js"></script>
+</body>
+
+</html>

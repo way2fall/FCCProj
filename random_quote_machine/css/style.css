@@ -1,0 +1,62 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body{
+  background: url("https://images.unsplash.com/photo-1454942901704-3c44c11b2ad1?ixlib=rb-0.3.5&q=85&fm=jpg&crop=entropy&cs=srgb&dl=joshua-earle-63441.jpg&s=aeb680c97568bf0be18c741ad0ba9d96");
+  background-size: cover;
+  
+}
+.main-container{
+  width:80%;
+  margin:20px auto 0 auto;
+/*   background:orange; */
+  max-width:960px;
+  
+}
+.quote-container{
+  border:1px solid #555;
+  padding:20px;
+/*   background:red; */
+  min-height:150px;
+}
+.quote-text{
+  margin-bottom:20px;
+  font-family: 'Lobster Two', cursive;
+  font-size:30px;
+}
+.said-by{
+  font-weight:700;
+  text-align:right;
+}
+button.random-quote{
+  position:relative;
+  top:-1px;
+  width:200px;
+  display:block;
+  margin:20px auto;
+  height:30px;
+  background-color:transparent;
+  border:1px solid #555;
+  cursor:pointer;
+  font-weight:700;
+  transition:0.2s ease-out all;
+}
+button.random-quote:hover{
+  color:#E4460C;
+  border-color:#E4460C;
+}
+h1{
+  width:50%;
+  margin:30px auto;
+  font-size: 50px;
+}
+p.ps{
+  text-align: right;
+  margin-right:30px;
+}
+.twitter-share-button{
+  display: block;
+  margin:0 auto;
+}
