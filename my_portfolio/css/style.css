@@ -125,3 +125,10 @@ footer {
     color: gray;
     background-color: black;
 }
+.pf-headline{
+    font-size: 18px;
+    text-align: center;
+}
+.pf-p{
+    color:black;
+}
