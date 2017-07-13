@@ -1,0 +1,14 @@
+.container{
+	height: 100vh;
+}
+
+.info{
+	padding-top: 10%;
+	padding-bottom: 20%;
+}
+#location{
+	margin-bottom: 30px;
+}
+#weather{
+	margin-top: 30px;
+}
