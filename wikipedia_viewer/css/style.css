@@ -16,6 +16,9 @@ a.random{
 a.random:hover{
   text-decoration:none;
 }
+.mg{
+  margin-bottom: 30px;
+}
 input{
   border-radius:30px;
   width:30px;
@@ -42,4 +45,8 @@ input:focus{
   top:23px;
   transform: rotate(-41deg);
   display: inline-block;
+}
+.well{
+  margin-top: 50px;
+  width: 100%;
 }
