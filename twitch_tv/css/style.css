@@ -1,0 +1,45 @@
+*{
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+.tops{
+	width: 300px;
+	background: #000;
+	margin: 0 auto;
+	margin-top: 3%;
+
+}
+.tops ul{
+	list-style-type: none;
+	overflow: hidden;
+}
+.tops ul li{
+	float: left;
+	width: 100px;
+	/*text-align: center;*/
+}
+
+.tops ul li a{
+	display: block;
+	color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+
+}
+.tops a:hover{
+	opacity: .5;
+}
+.tops li:first-child,.tops li:last-child{
+	border-left: 1px solid #bbb;
+	border-right: 1px solid #bbb;
+}
+.content{
+	background: orange;
+	height: 80vh;
+	top: -10px;
+	position: relative;
+	margin: 0 auto;
+	width: 300px;
+}
