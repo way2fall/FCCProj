@@ -14,13 +14,13 @@ function getTwitch() {
 
         $.getJSON(getURL("channels", username), function(data) {
             // console.log(data);
-            var game, status, logo, url, desc;
+            var game, status, logo, url, desc, html;
             if (data.status == 404) {
                 game = "Account Closed";
                 status = "offline";
             }
-            logo = data.logo != undefined ? data.logo : "general_avatar.png";
-            url = data.url != undefined ? data.url : "404";
+            logo = data.logo != undefined ? data.logo : "https://dummyimage.com/50x50/f7f7f7/6168bf.png&text=twitch";
+            url = data.url != undefined ? data.url : "https://www.twitch.tv/404";
             // 这里先获取了status，后面再根据是否为online来决定用不用
             desc = data.status;
             $.getJSON(getURL("streams", username), function(data) {
@@ -33,7 +33,14 @@ function getTwitch() {
                 }
                 //无论是否在线都会有status所以用之前的"online"来判断是否显示status(也就是这里的desc)
                 desc = status === "online" ? desc : "";
-                console.log("logo: " + logo + " name: " + username + " status: " + status + " game: " + game + " url: " + url + " description: " + desc);
+                console.log("logo: " + logo + " name: " + username + " status: " + status + 
+                	" game: " + game + " url: " + url + " description: " + desc);
+                html = '<div class="row '+status+'"><div class="col-md-2 icon"><img \
+                src="'+logo+'" class="logo"></div><div class="col-md-4 name"><a href="'
+                + url + '" target="_blank">'+username+"</a></div><div class='col-md-6 streaming'>"+game
+                +desc+'</div></div>';
+                console.log(html);
+                status === "online"?$(".content").prepend(html):$(".content").append(html);
             });
         });
         // console.log("name: "+username+" status: "+ status+" game: "+game);
@@ -42,6 +49,21 @@ function getTwitch() {
 
 $(document).ready(function() {
     getTwitch();
+    $("li").click(function(){
+    	$("li").removeClass("active");
+    	$(this).addClass("active");
+    	var status = $(this).attr("id");
+    	if(status === "all"){
+    		$(".online, .offline").removeClass("hidden");
+    	} else if(status === "online"){
+    		$(".offline").addClass("hidden");
+    		$(".online").removeClass("hidden");
+    	} else{
+    		$(".online").addClass("hidden");
+    		$(".offline").removeClass("hidden");
+    	}
+
+    });
 });
 
 
