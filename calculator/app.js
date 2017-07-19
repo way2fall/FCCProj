@@ -19,6 +19,7 @@ $(document).ready(function() {
     });
     //退格
     $('.CE').click(function() {
+    	screenValue = screenValue.toString();
         screenValue = screenValue.slice(0, screenValue.length - 1);
         $("#screen").val(screenValue);
     });
