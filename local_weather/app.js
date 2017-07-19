@@ -25,23 +25,43 @@
 //             }).fail(alert("fail"));
 //         });
 //     })
-$(document).ready(function(){
-	if (navigator.geolocation) {console.log('a');
-    navigator.geolocation.getCurrentPosition(function(position) {
-console.log('b');
-      $.ajax({
-        url: 'https://api.wunderground.com/api/686a817dcd0a4281/geolookup/conditions/q/' + position.coords.latitude + ',' + position.coords.longitude + '.json',
-        success: function(data) {
-          console.log(data.location.city + ', ' + data.location.country_name);
-          
-        }
-      });
+$(document).ready(function() {
+    if (navigator.geolocation) {
+        console.log('a');
+        navigator.geolocation.getCurrentPosition(function(position) {
+            console.log('b');
+            //FCC api
+            $.getJSON("https://fcc-weather-api.glitch.me//api/current?lon="+position.coords.longitude+"&lat="+position.coords.latitude, function(data){
+              console.log(data);
+            })
+            // wunderground api
+            // $.ajax({
+            //   url: 'https://api.wunderground.com/api/686a817dcd0a4281/geolookup/conditions/q/' + position.coords.latitude + ',' + position.coords.longitude + '.json',
+            //   success: function(data) {
+            //     console.log(data);
+            //     console.log(data.location.city + ', ' + data.location.country_name);
 
+            //   }
+            // });
 
-    })
-  } 
+            //聚合api
+            // $.ajax({
+            //   url: 'http://v.juhe.cn/weather/geo?format=2&key=62c00da5272af082af7c2f1f63380515&lon=' + position.coords.longitude +"&lat="+position.coords.latitude,
+            //   dataType: 'jsonp',
+            //   success: function(data) {
+            //     console.log(data);
+            //     // console.log(data.location.city + ', ' + data.location.country_name);
+            //     var city = data.result.today;
+            //     var weather = data.result.today.weather;
+            //     var temperature = data.result.today.temperature;
+            //     console.log("city"+city+" weather"+weather+" temperature"+temperature);
+            //   }
+            // });
+
+        })
+    }
 })
-    // $(document).ready(function() {
+// $(document).ready(function() {
 
 
 //     console.log(data.resultcode);
@@ -84,15 +104,15 @@ console.log('b');
 //         var future = data.result.future;
 
 //         $.each(future, function(key,value){
-//         	var future_html = "";
-//         	console.log(key+":");
-//         	future_html+="<div class='col-md-3'>";
-//         	$.each(value, function(inKey, inValue){
+//          var future_html = "";
+//          console.log(key+":");
+//          future_html+="<div class='col-md-3'>";
+//          $.each(value, function(inKey, inValue){
 
-//         		console.log(inKey+inValue);
-//         		future_html+="<p>"+inKey+":"+inValue+"</p>";
-//         	});future_html+="</div>";
-//         	$(".row").html(future_html);
+//            console.log(inKey+inValue);
+//            future_html+="<p>"+inKey+":"+inValue+"</p>";
+//          });future_html+="</div>";
+//          $(".row").html(future_html);
 //         })
 //     } else {
 //         console.log("没数据");
