@@ -1,13 +1,17 @@
 *{
 	box-sizing: border-box;
+	margin:0;
 }
 .container{
 	width: 100%;
+	height: 100vh;
+	background: #0099CC;
+	overflow: hidden; /*解决父元素.container和子元素.calculator之间margin塌陷问题（解决子元素margin-top无效）*/
 }
 .calculator{
 	width:500px;
 	background: #CC9999;
-	margin: auto;
+	margin: 20px auto auto auto;
 	border-radius: 10px;
 	padding: 30px;
 }
