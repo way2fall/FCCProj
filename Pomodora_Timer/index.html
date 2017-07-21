@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Pomodora Timer</title>
+    <script src="https://cdn.bootcss.com/jquery/1.12.4/jquery.min.js"></script>
+    <link rel="stylesheet" href="http://apps.bdimg.com/libs/fontawesome/4.4.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/style.css">
+    <!--[if lt IE 9]>
+      <script src="https://cdn.bootcss.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+      <script src="https://cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+</head>
+
+<body>
+    <section class="container-fluid">
+        <div class="row">
+            <div class="col-xs-3 col-xs-offset-3">
+                <h3>Work</h3>
+            </div>
+            <div class="col-xs-3">
+                <h3>Break</h3>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-xs-3 col-xs-offset-3">
+                <i class="fa fa-lg fa-minus-circle" id="w-minus" aria-hidden="true"></i>
+                <span id="w-time">25</span>
+                <i class="fa fa-lg fa-plus-circle" id="w-plus" aria-hidden="true"></i>
+            </div>
+            <div class="col-xs-3">
+                <i class="fa fa-lg fa-minus-circle" id="b-minus" aria-hidden="true"></i>
+                <span id="b-time">5</span>
+                <i class="fa fa-lg fa-plus-circle" id="b-plus" aria-hidden="true"></i>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-xs-12">
+                <div class="time-control">
+                    <i class="fa fa-lg fa-play" aria-hidden="true"></i>
+                    <i class="fa fa-lg fa-pause" aria-hidden="true"></i>
+                    <i class="fa fa-lg fa-stop" aria-hidden="true"></i>
+                </div>
+                <div id="timer">00:00:00</div>
+                <canvas id="waterbubble"></canvas>
+                
+                <h3 id="status">Keep Working!!!</h3>
+            </div>
+        </div>
+    </section>
+    <script src="js/app.js"></script>
+    <script src="js/waterbubble.min.js"></script>
+</body>
+
+</html>
