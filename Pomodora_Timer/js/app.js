@@ -75,9 +75,9 @@ function updateDisplay(t) {
 //更新所有信息(倒计时、进度及作息提示)
 function update() {
 
-	if(time<=0){
-		return;
-	}
+	// if(time<=0){
+	// 	return;
+	// }
 
 	//获取每次更新(调用)时的当前时间戳
 	var tnow = (new Date()).getTime();
