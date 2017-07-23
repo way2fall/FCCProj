@@ -75,7 +75,7 @@ function updateDisplay(t) {
 
 //更新所有信息(倒计时、进度及作息提示)
 function update() {
-
+	//按下停止按钮时不再向下执行
     if(time<=0){
     	return;
     }
@@ -148,13 +148,9 @@ function stop() {
     running = false;
     time = 0;
     $("#timer").text("00:00:00");
-    console.log($("#timer").text());
     $("#status").text("Keep Working!!!");
-    console.log($("#timer").text());
     $("#w-time").text("25");
-    console.log($("#timer").text());
     $("#b-time").text("5");
-    console.log($("#timer").text());
     $("#waterbubble").waterbubble({
         data: 0.0,
         waterColor: "#99CCCC",
@@ -162,5 +158,5 @@ function stop() {
         animation: false,
         // radius: 120,
     });
-    console.log($("#timer").html());
+
 }
