@@ -15,24 +15,33 @@
 </head>
 
 <body>
+    <!-- 导航条控件 在container外 占满宽度 颜色反色(inverse) 固定于最上 -->
     <div class="navbar navbar-inverse navbar-fixed-top">
         <div class="container">
+            <!-- 移动设备导航条缩为折叠按钮(navbar-toggle) data-toggle绑定js的collapse控件 data-target绑定要控制的目标为下面的.navbar-collapse类的内容 -->
             <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                <!-- 三个span表示折叠按钮有三道杠 -->
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
             <a href="" class="navbar-brand text-muted">Ribbit</a>
+            
+            <!-- 导航条内容(需要折叠的) -->
             <div class="collapse navbar-collapse">
                 <ul class="nav navbar-nav navbar-right">
                     <li class="active"><a href="#">Home</a></li>
                     <li><a href="#">About Ribbit</a></li>
+                    <!-- 导航条中添加一个下拉菜单 -->
                     <li class="dropdown">
+                        <!-- 绑定js下拉菜单控件 -->
                         <a data-toggle="dropdown" data-target="#">Treehouse<b class="caret"></b></a>
+                        <!-- 下拉菜单内容 -->
                         <ul class="dropdown-menu">
                             <li><a href="#">About Treehouse</a></li>
                             <li><a href="#">Video Library</a></li>
                             <li><a href="#">Learning Adventures</a></li>
+                            <!-- 分隔符 -->
                             <li class="divider"></li>
                             <li><a href="#">Plans &amp; pricing</a></li>
                         </ul>
@@ -41,13 +50,16 @@
             </div>
         </div>
     </div>
+    <!-- 轮播图 -->
     <div id="myCarousel" class="carousel slide jumbotron">
         <div class="container">
-          <ol class="carousel-indicators">
-            <li class="active" data-target="#myCarousel" data-slide-to="0"></li>
-            <li data-target="#myCarousel" data-slide-to="1"></li>
-            <li data-target="#myCarousel" data-slide-to="2"></li>
-          </ol>
+            <!-- 轮播图小圆点指示符 -->
+            <ol class="carousel-indicators">
+                <li class="active" data-target="#myCarousel" data-slide-to="0"></li>
+                <li data-target="#myCarousel" data-slide-to="1"></li>
+                <li data-target="#myCarousel" data-slide-to="2"></li>
+            </ol>
+            <!-- 轮播图内容 -->
             <div class="carousel-inner">
                 <div class="item active">
                     <h1>Self-destructing message app</h1>
@@ -75,6 +87,7 @@
                 </div>
             </div>
         </div>
+        <!-- 左右切换箭头 -->
         <a href="#myCarousel" class="left carousel-control" data-slide="prev">
           <span class="icon-prev"></span>
         </a>
