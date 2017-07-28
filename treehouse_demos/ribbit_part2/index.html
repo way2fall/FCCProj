@@ -82,7 +82,8 @@
                     <p class="lead">Learn how to build this fun little app by signing up for a Treehouse account today! We'll teach you how to build both apps from scratch!</p>
                     <p class="btn-group">
                         <a class="btn btn-success btn-lg" href="#">Download the app</a>
-                        <a class="btn btn-default btn-lg" href="#">Text me the link</a>
+                        <!-- 绑定modal控件，绑定锚点 -->
+                        <a class="btn btn-default btn-lg" data-toggle="modal" href="#textModal">Text me the link</a>
                     </p>
                 </div>
             </div>
@@ -95,6 +96,35 @@
           <span class="icon-next"></span>
         </a>
     </div>
+
+    <div class="modal fade" id="textModal">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+            <h4 class="modal-title">We'll text you the link!</h4>
+          </div>
+
+          <div class="modal-body">
+            <!-- 水平form -->
+            <form>
+              <div class="form-group">
+                <label class="sr-only" for="mobilePhone">Mobile Phone</label>
+                <input type="tel" class="form-control" id="mobilePhone" placeholder="Mobile Phone">
+              </div>
+              <div class="form-group">
+                <select class="form-control">
+                  <option>iOS</option>
+                  <option>Android</option>
+                </select>
+              </div>
+              <button type="submit" class="btn btn-primary" data-dismiss="modal">Send me link</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+
     <div class="container">
         <div class="row">
             <div class="col-sm-4">
