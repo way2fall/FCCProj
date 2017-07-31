@@ -33,21 +33,29 @@ Playlist.prototype.renderInElement = function(list) {
 };
 // 播放列表 end
 
-// 歌曲 start
-function Song(title,artist,duration) {
+// 父类Media start
+function Media(title, duration){
   this.title = title;
-  this.artist = artist;
   this.duration = duration;
   this.isPlaying = false;
 }
 
-Song.prototype.play = function() {
+Media.prototype.play = function() {
   this.isPlaying = true;
 };
 
-Song.prototype.stop = function() {
+Media.prototype.stop = function() {
   this.isPlaying = false;
 };
+// 父类Media end
+
+// 歌曲 start
+function Song(title,artist,duration) {
+  Media.call(this, title, duration);
+  this.artist = artist;
+}
+
+Song.prototype = Object.create(Media.prototype);
 
 Song.prototype.toHTML = function() {
   var htmlString = "<li";
@@ -66,11 +74,38 @@ Song.prototype.toHTML = function() {
 };
 // 歌曲 end
 
+//电影 start
+function Movie(title, year, duration){
+  Media.call(this, title, duration);
+  this.year = year;
+}
+Movie.prototype = Object.create(Media.prototype);
+
+Movie.prototype.toHTML = function() {
+  var htmlString = "<li";
+  if(this.isPlaying){
+  htmlString+=" class='current'";
+  }
+  htmlString+=">"
+  htmlString+=this.title;
+  htmlString+="(";
+  htmlString+=this.year;
+  htmlString+=")";
+  htmlString+="<span class='duration'>";
+  htmlString+=this.duration;
+  htmlString+="</span></li>";
+  
+  return htmlString;
+};
+//电影 end
+
 const myPlayList = new Playlist();
 const freeLoop = new Song("free loop", "daniel powter", "4:30");
 const high = new Song("high", "james blunt", "3:58");
+const darkKnight = new Movie("Dark Knight", "2008","2:30:13");
 myPlayList.add(freeLoop);
 myPlayList.add(high);
+myPlayList.add(darkKnight);
 
 const playlistElement = document.getElementById("playlist");
 myPlayList.renderInElement(playlistElement);
